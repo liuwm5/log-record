@@ -23,6 +23,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.expression.BeanFactoryResolver;
 import org.springframework.core.DefaultParameterNameDiscoverer;
+import org.springframework.core.annotation.Order;
 import org.springframework.expression.BeanResolver;
 import org.springframework.expression.Expression;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
@@ -42,6 +43,7 @@ import java.util.function.Consumer;
 @Aspect
 @Component
 @Slf4j
+@Order(1)
 public class SystemLogAspect implements ApplicationContextAware {
 
     @Autowired
